@@ -226,6 +226,10 @@ class Ndrive(object):
             'NDriveSvcType': 'NHN/ND-WEB Ver',
         }, stream=True)
 
+        dirname = os.path.dirname(local_path)
+        if not os.path.isdir(dirname) or not os.path.exists(dirname):
+            os.makedirs(dirname)
+
         resp.raw.decode_content = True
         shutil.copyfileobj(resp.raw, open(local_path, 'wb+'))
 
