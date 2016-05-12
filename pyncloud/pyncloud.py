@@ -53,6 +53,9 @@ class NdriveError(Exception):
         self.code = code
         self.message = message
 
+    def __str__(self):
+        return 'NdriveError code="%s" message="%s"' % (self.code, self.message)
+
 
 class Ndrive(object):
     class Types(object):
