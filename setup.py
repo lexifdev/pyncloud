@@ -4,7 +4,7 @@ from distutils.core import setup
 setup(
     name='pyncloud',
     packages=['pyncloud'],
-    version='0.0.2',
+    version='0.0.3',
     description='Simple python library for Naver Cloud (https://cloud.naver.com).',
     long_description='WIP',
     license='MIT License',
